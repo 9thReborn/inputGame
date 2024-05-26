@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 250px;
+  padding: 50px;
+}
+
+.button {
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.inputField {
+  width: 700px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.form-group.error input {
+  border-color: red;
+}
+
+.form-group.shake input {
+  border-color: red;
+  animation: shake 0.3s;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+.bottom-text{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: red;
+  margin-top: 10px;
+  font-size: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.success-screen{
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-evenly;
+  align-items: center; 
+  margin-top: 250px;
+  margin-left: 50px;
+  padding: 50px;
+  /* border: 2px solid white; */
+}
+.success-modal{
+  /* border: 2px solid green; */
+  background-color: green;
+  padding: 20px;
+  border-radius: 10px;
+}
+.game-over{
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 250px;
+  margin-left: 350px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.game-over h1{
+  font-size: 100px;
+  color: red;
+  margin-bottom: -50px;
+}
+
+.game-over p{
+  font-size: 20px;
+  color: red;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
